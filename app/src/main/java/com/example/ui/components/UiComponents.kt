@@ -441,6 +441,12 @@ fun ChapterHorizontalCard(
                     done = chapter.revisionDone,
                     activeColor = StageRevisionColor,
                     compact = true
+                )
+            }
+        }
+    }
+}
+
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
 fun ChapterVerticalRow(
