@@ -40,7 +40,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
@@ -52,6 +51,7 @@ import com.example.ui.components.AnimatedCounterText
 import com.example.ui.components.AnimatedProgressRing
 import com.example.ui.components.StaggeredEntrance
 import com.example.ui.components.pressScale
+import com.example.ui.theme.JetBrainsMonoFontFamily
 import com.example.ui.theme.LocalAppAppearance
 import com.example.ui.theme.StagePracticeColor
 import com.example.ui.theme.StageRevisionColor
@@ -255,55 +255,19 @@ private fun HeroStatChip(
 }
 
 private data class SubjectCardStyle(
-    val gradientColors: List<Color>,
-    val foreground: Color,
-    val progress: Color,
-    val progressTrack: Color,
+    val accent: Color,
     val border: Color
 )
 
 @Composable
-private fun subjectCardStyle(
-    subjectId: String,
-    accentPreset: AccentPreset
-): SubjectCardStyle {
-    val presetHsv = FloatArray(3)
-    android.graphics.Color.colorToHSV(accentPreset.previewHex.toInt(), presetHsv)
-
-    val subjectHue = when (subjectId) {
-        "physics" -> 205f
-        "chemistry" -> 153f
-        "maths" -> 34f
-        else -> 250f
-    }
-    val hueOffset = presetHsv[0] - 242f
-    val hue = ((subjectHue + hueOffset + 360f) % 360f)
-    val nextHue = (hue + 16f) % 360f
-    val darkSurface = MaterialTheme.colorScheme.background.luminance() < 0.5f
-
-    return if (darkSurface) {
-        SubjectCardStyle(
-            gradientColors = listOf(
-                Color.hsv(hue, 0.72f, 0.43f),
-                Color.hsv(nextHue, 0.78f, 0.32f)
-            ),
-            foreground = Color(0xFFF8FAFC),
-            progress = Color.hsv(hue, 0.22f, 1f),
-            progressTrack = Color.White.copy(alpha = 0.22f),
-            border = Color.hsv(hue, 0.42f, 0.72f).copy(alpha = 0.42f)
-        )
-    } else {
-        SubjectCardStyle(
-            gradientColors = listOf(
-                Color.hsv(hue, 0.34f, 0.98f),
-                Color.hsv(nextHue, 0.46f, 0.88f)
-            ),
-            foreground = Color.hsv(hue, 0.78f, 0.24f),
-            progress = Color.hsv(hue, 0.78f, 0.58f),
-            progressTrack = Color.White.copy(alpha = 0.72f),
-            border = Color.hsv(hue, 0.48f, 0.72f).copy(alpha = 0.5f)
-        )
-    }
+private fun subjectCardStyle(accentPreset: AccentPreset): SubjectCardStyle {
+    // All three subject cards share one user-selected accent, matching the
+    // progress-card treatment. The preset remains controlled from Settings.
+    val accent = Color(accentPreset.previewHex)
+    return SubjectCardStyle(
+        accent = accent,
+        border = accent.copy(alpha = 0.38f)
+    )
 }
 
 @OptIn(ExperimentalSharedTransitionApi::class)
@@ -318,7 +282,7 @@ private fun SubjectLargeCard(
     val appearance = LocalAppAppearance.current
     val isCompact = appearance.cardDensity == CardDensity.COMPACT
     val interactionSource = remember { MutableInteractionSource() }
-    val style = subjectCardStyle(summary.subjectId, accentPreset)
+    val style = subjectCardStyle(accentPreset)
     val animatedProgress by animateFloatAsState(
         targetValue = summary.progressFraction,
         animationSpec = spring(dampingRatio = 0.8f, stiffness = Spring.StiffnessLow),
@@ -339,31 +303,53 @@ private fun SubjectLargeCard(
                 .fillMaxWidth()
                 .testTag("subject_card_${summary.subjectId}"),
             shape = RoundedCornerShape(appearance.cardCornerRadius),
-            colors = CardDefaults.cardColors(containerColor = style.gradientColors.first()),
+            colors = CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.surfaceContainerLow
+            ),
             border = BorderStroke(1.dp, style.border)
         ) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Brush.linearGradient(style.gradientColors))
-                    .padding(
-                        horizontal = appearance.cardPadding + 4.dp,
-                        vertical = if (isCompact) 17.dp else 21.dp
-                    ),
-                verticalArrangement = Arrangement.spacedBy(if (isCompact) 9.dp else 12.dp)
+                    .padding(appearance.cardPadding),
+                verticalArrangement = Arrangement.spacedBy(if (isCompact) 8.dp else 10.dp)
             ) {
-                Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                    Text(
-                        text = summary.subjectName,
-                        style = MaterialTheme.typography.headlineMedium.copy(
-                            fontWeight = FontWeight.SemiBold
-                        ),
-                        color = style.foreground
-                    )
-                    AnimatedCounterText(
-                        text = "${summary.completedChapters} / ${summary.totalChapters} chapters",
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = style.foreground.copy(alpha = 0.9f)
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Column(
+                        modifier = Modifier.weight(1f),
+                        verticalArrangement = Arrangement.spacedBy(2.dp)
+                    ) {
+                        Text(
+                            text = summary.subjectName,
+                            style = MaterialTheme.typography.titleLarge.copy(
+                                fontWeight = FontWeight.Bold
+                            ),
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+                        AnimatedCounterText(
+                            text = "${summary.completedChapters} of ${summary.totalChapters} chapters complete",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = "Theory ${summary.theoryDoneCount}/${summary.totalChapters}  •  Practice ${summary.practiceDoneCount}/${summary.totalChapters}  •  Rev ${summary.revisionDoneCount}/${summary.totalChapters}",
+                            style = MaterialTheme.typography.labelMedium.copy(
+                                fontFamily = JetBrainsMonoFontFamily
+                            ),
+                            color = style.accent,
+                            maxLines = 2
+                        )
+                    }
+
+                    AnimatedProgressRing(
+                        progress = summary.progressFraction,
+                        accentColor = style.accent,
+                        size = if (isCompact) 58.dp else 62.dp
                     )
                 }
 
@@ -371,10 +357,10 @@ private fun SubjectLargeCard(
                     progress = { animatedProgress },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(5.dp)
-                        .clip(RoundedCornerShape(4.dp)),
-                    color = style.progress,
-                    trackColor = style.progressTrack,
+                        .height(6.dp)
+                        .clip(RoundedCornerShape(3.dp)),
+                    color = style.accent,
+                    trackColor = MaterialTheme.colorScheme.surfaceVariant,
                     strokeCap = StrokeCap.Round
                 )
             }
