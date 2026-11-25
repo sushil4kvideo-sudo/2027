@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -104,7 +105,8 @@ fun subjectVisualFor(subjectId: String): SubjectVisual = when (subjectId) {
 fun ImportantChapterBadge(
     tier: ImportanceTier?,
     weightageTag: String?,
-    compact: Boolean = false
+    compact: Boolean = false,
+    modifier: Modifier = Modifier
 ) {
     val (bgColor, fgColor, icon, defaultLabel) = when (tier) {
         ImportanceTier.ONE_SHOT -> Quadruple(
@@ -137,6 +139,7 @@ fun ImportantChapterBadge(
     }
 
     Surface(
+        modifier = modifier,
         color = bgColor,
         shape = RoundedCornerShape(8.dp),
         border = BorderStroke(0.75.dp, fgColor.copy(alpha = 0.4f))
@@ -162,7 +165,9 @@ fun ImportantChapterBadge(
                     fontWeight = FontWeight.Bold
                 ),
                 color = fgColor,
-                maxLines = 1
+                maxLines = 1,
+                softWrap = false,
+                overflow = TextOverflow.Ellipsis
             )
         }
     }
@@ -509,6 +514,7 @@ fun ChapterVerticalRow(
             .then(sharedMod)
             .pressScale(interactionSource)
             .fillMaxWidth()
+            .height(if (isCompact) 168.dp else 184.dp)
             .testTag("chapter_card_${chapter.spec.id}"),
         shape = RoundedCornerShape(appearance.cardCornerRadius),
         colors = CardDefaults.cardColors(containerColor = containerColor),
@@ -516,12 +522,14 @@ fun ChapterVerticalRow(
     ) {
         Column(
             modifier = Modifier
-                .fillMaxWidth()
+                .fillMaxSize()
                 .padding(appearance.cardPadding),
-            verticalArrangement = Arrangement.spacedBy(if (isCompact) 8.dp else 11.dp)
+            verticalArrangement = Arrangement.SpaceBetween
         ) {
             Row(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(100.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(12.dp)
             ) {
@@ -549,9 +557,15 @@ fun ChapterVerticalRow(
                         style = MaterialTheme.typography.titleMedium,
                         color = MaterialTheme.colorScheme.onSurface,
                         maxLines = 2,
-                        overflow = TextOverflow.Ellipsis
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(70.dp)
                     )
                     Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(26.dp),
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
@@ -559,13 +573,17 @@ fun ChapterVerticalRow(
                             ImportantChapterBadge(
                                 tier = chapter.spec.importanceTier,
                                 weightageTag = chapter.spec.weightageTag,
-                                compact = true
+                                compact = true,
+                                modifier = Modifier.weight(1f)
                             )
                         }
                         Text(
                             text = "${chapter.spec.topics.size} topics",
                             style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            maxLines = 1,
+                            softWrap = false,
+                            overflow = TextOverflow.Ellipsis
                         )
                     }
                 }
