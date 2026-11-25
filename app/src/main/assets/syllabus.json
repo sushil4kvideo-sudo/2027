@@ -1,0 +1,837 @@
+{
+  "examName": "JEE (Main) 2027 - Paper 1 (B.E./B.Tech.)",
+  "syllabusYear": 2027,
+  "sourceName": "National Testing Agency (NTA)",
+  "sourceUrl": "https://jeemain.nta.nic.in/syllabus/",
+  "bulletinUrl": "https://cdnbbsr.s3waas.gov.in/s3ntaedun/uploads/2026/10/2026-10-24-19.pdf",
+  "fetchedDate": "2026-11-24",
+  "session1ExamStartDate": "2027-01-20",
+  "session1ExamDatesNote": "JEE Main 2027 Session 1 scheduled for Jan 20, 21, 22, 23, 24 & 28, 2027 per NTA Information Bulletin.",
+  "subjects": [
+    {
+      "id": "physics",
+      "name": "Physics",
+      "branches": [
+        {
+          "id": "physics_all",
+          "name": "All Units",
+          "chapters": [
+            {
+              "id": "phy_01",
+              "unitNumber": 1,
+              "name": "Physics and Measurement",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "Units of measurements, System of Units, SI Units",
+                "Fundamental and derived units",
+                "Least count and significant figures",
+                "Errors in measurements",
+                "Dimensions of physical quantities, dimensional analysis and its applications"
+              ]
+            },
+            {
+              "id": "phy_02",
+              "unitNumber": 2,
+              "name": "Kinematics",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "Frame of reference, motion in a straight line",
+                "Position-time graph, speed and velocity",
+                "Uniform and non-uniform motion, average speed and instantaneous velocity",
+                "Uniformly accelerated motion, velocity-time and position-time graphs, relations for uniformly accelerated motion",
+                "Scalars and vectors, vector addition and subtraction, scalar and vector products, unit vector, resolution of a vector",
+                "Relative velocity, motion in a plane, projectile motion, uniform circular motion"
+              ]
+            },
+            {
+              "id": "phy_03",
+              "unitNumber": 3,
+              "name": "Laws of Motion",
+              "isImportant": false,
+              "topics": [
+                "Force and inertia, Newton's first law of motion",
+                "Momentum, Newton's second law of motion, impulses",
+                "Newton's third law of motion",
+                "Law of conservation of linear momentum and its applications",
+                "Equilibrium of concurrent forces",
+                "Static and kinetic friction, laws of friction, rolling friction",
+                "Dynamics of uniform circular motion: centripetal force and its applications (vehicle on a level circular road, vehicle on a banked road)"
+              ]
+            },
+            {
+              "id": "phy_04",
+              "unitNumber": 4,
+              "name": "Work, Energy and Power",
+              "isImportant": false,
+              "topics": [
+                "Work done by a constant force and a variable force",
+                "Kinetic and potential energies, work-energy theorem, power",
+                "Potential energy of a spring, conservation of mechanical energy",
+                "Conservative and non-conservative forces",
+                "Motion in a vertical circle",
+                "Elastic and inelastic collisions in one and two dimensions"
+              ]
+            },
+            {
+              "id": "phy_05",
+              "unitNumber": 5,
+              "name": "Rotational Motion",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "Centre of mass of a two-particle system, centre of mass of a rigid body",
+                "Basic concepts of rotational motion, moment of a force, torque, angular momentum, conservation of angular momentum and its applications",
+                "Moment of inertia, radius of gyration, values of moments of inertia for simple geometrical objects",
+                "Parallel and perpendicular axes theorems and their applications",
+                "Equilibrium of rigid bodies, rigid body rotation and equations of rotational motion, comparison of linear and rotational motions"
+              ]
+            },
+            {
+              "id": "phy_06",
+              "unitNumber": 6,
+              "name": "Gravitation",
+              "isImportant": false,
+              "topics": [
+                "Universal law of gravitation",
+                "Acceleration due to gravity and its variation with altitude and depth",
+                "Kepler's laws of planetary motion",
+                "Gravitational potential energy, gravitational potential",
+                "Escape velocity, motion of a satellite, orbital velocity, time period and energy of satellite"
+              ]
+            },
+            {
+              "id": "phy_07",
+              "unitNumber": 7,
+              "name": "Properties of Solids and Liquids",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2 Q/shift",
+              "topics": [
+                "Elastic behaviour, stress-strain relationship, Hooke's law, Young's modulus, bulk modulus, modulus of rigidity",
+                "Pressure due to a fluid column, Pascal's law and its applications, effect of gravity on fluid pressure",
+                "Viscosity, Stokes' law, terminal velocity, streamline and turbulent flow, critical velocity, Bernoulli's principle and its applications",
+                "Surface energy and surface tension, angle of contact, excess of pressure across a curved surface, application of surface tension (drops, bubbles, capillary rise)",
+                "Heat, temperature, thermal expansion, specific heat capacity, calorimetry, change of state, latent heat",
+                "Heat transfer: conduction, convection and radiation"
+              ]
+            },
+            {
+              "id": "phy_08",
+              "unitNumber": 8,
+              "name": "Thermodynamics",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2-3 Q/shift",
+              "topics": [
+                "Thermal equilibrium, zeroth law of thermodynamics, concept of temperature",
+                "Heat, work and internal energy",
+                "First law of thermodynamics, isothermal and adiabatic processes",
+                "Second law of thermodynamics: reversible and irreversible processes"
+              ]
+            },
+            {
+              "id": "phy_09",
+              "unitNumber": 9,
+              "name": "Kinetic Theory of Gases",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2-3 Q/shift",
+              "topics": [
+                "Equation of state of a perfect gas, work done on compressing a gas",
+                "Kinetic theory of gases: assumptions, concept of pressure",
+                "Kinetic interpretation of temperature, RMS speed of gas molecules",
+                "Degrees of freedom, law of equipartition of energy and applications to specific heat capacities of gases",
+                "Mean free path, Avogadro's number"
+              ]
+            },
+            {
+              "id": "phy_10",
+              "unitNumber": 10,
+              "name": "Oscillations and Waves",
+              "isImportant": false,
+              "topics": [
+                "Oscillations and periodic motion: time period, frequency, displacement as a function of time, periodic functions",
+                "Simple harmonic motion (SHM) and its equation, phase, oscillations of a spring, restoring force and force constant, energy in SHM (kinetic and potential)",
+                "Simple pendulum: derivation of expression for its time period",
+                "Wave motion: longitudinal and transverse waves, speed of travelling wave, displacement relation for a progressive wave",
+                "Principle of superposition of waves, reflection of waves",
+                "Standing waves in strings and organ pipes, fundamental mode and harmonics, beats"
+              ]
+            },
+            {
+              "id": "phy_11",
+              "unitNumber": 11,
+              "name": "Electrostatics",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2 Q/shift",
+              "topics": [
+                "Electric charges: conservation of charge, Coulomb's law, forces between multiple charges, superposition principle and continuous charge distribution",
+                "Electric field: electric field due to a point charge, electric field lines, electric dipole, electric field due to a dipole, torque on a dipole in a uniform electric field",
+                "Electric flux, Gauss's law and its applications (uniformly charged straight wire, infinite plane sheet, thin spherical shell)",
+                "Electric potential and its calculation for a point charge, electric dipole and system of charges, potential difference, equipotential surfaces, electrical potential energy of a system of two point charges and of electric dipole in an electrostatic field",
+                "Conductors and insulators, dielectrics and electric polarization",
+                "Capacitors and capacitance, combination of capacitors in series and parallel, capacitance of a parallel plate capacitor with and without dielectric medium, energy stored in a capacitor"
+              ]
+            },
+            {
+              "id": "phy_12",
+              "unitNumber": 12,
+              "name": "Current Electricity",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "Electric current, drift velocity, mobility and their relation with electric current",
+                "Ohm's law, electrical resistance, V-I characteristics of ohmic and non-ohmic conductors, electrical energy and power, electrical resistivity and conductivity",
+                "Series and parallel combinations of resistors, temperature dependence of resistance",
+                "Internal resistance, potential difference and emf of a cell, combination of cells in series and parallel",
+                "Kirchhoff's laws and their applications",
+                "Wheatstone bridge, metre bridge"
+              ]
+            },
+            {
+              "id": "phy_13",
+              "unitNumber": 13,
+              "name": "Magnetic Effects of Current and Magnetism",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "Biot-Savart law and its application to current carrying circular loop",
+                "Ampere's law and its applications to infinitely long current carrying straight wire and solenoid",
+                "Force on a moving charge in uniform magnetic and electric fields",
+                "Force on a current-carrying conductor in a uniform magnetic field, force between two parallel current-carrying conductors (definition of ampere)",
+                "Torque experienced by a current loop in a uniform magnetic field, moving coil galvanometer, its sensitivity and conversion to ammeter and voltmeter",
+                "Current loop as a magnetic dipole and its magnetic dipole moment",
+                "Bar magnet as an equivalent solenoid, magnetic field lines, magnetic field due to a magnetic dipole along its axis and perpendicular to its axis, torque on a magnetic dipole in a uniform magnetic field",
+                "Para-, dia- and ferro-magnetic substances with examples, effect of temperature on magnetic properties"
+              ]
+            },
+            {
+              "id": "phy_14",
+              "unitNumber": 14,
+              "name": "Electromagnetic Induction and Alternating Currents",
+              "isImportant": true,
+              "importanceTier": "ONE_SHOT",
+              "weightageTag": "One Shot • Easy",
+              "topics": [
+                "Electromagnetic induction: Faraday's law, induced emf and current",
+                "Lenz's law, eddy currents",
+                "Self and mutual inductance",
+                "Alternating currents, peak and RMS value of alternating current/voltage",
+                "Reactance and impedance, LCR series circuit, resonance, power in AC circuits, wattless current",
+                "AC generator and transformer"
+              ]
+            },
+            {
+              "id": "phy_15",
+              "unitNumber": 15,
+              "name": "Electromagnetic Waves",
+              "isImportant": true,
+              "importanceTier": "ONE_SHOT",
+              "weightageTag": "One Shot • Easy",
+              "topics": [
+                "Displacement current",
+                "Electromagnetic waves and their characteristics, transverse nature of electromagnetic waves",
+                "Electromagnetic spectrum (radio waves, microwaves, infrared, visible, ultraviolet, X-rays, gamma rays) and applications of e.m. waves"
+              ]
+            },
+            {
+              "id": "phy_16",
+              "unitNumber": 16,
+              "name": "Optics",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "3 Q/shift",
+              "topics": [
+                "Reflection of light, spherical mirrors, mirror formula",
+                "Refraction of light at plane and spherical surfaces, thin lens formula and lens maker formula",
+                "Total internal reflection and its applications",
+                "Magnification, power of a lens, combination of thin lenses in contact",
+                "Refraction of light through a prism",
+                "Microscope and astronomical telescope (reflecting and refracting) and their magnifying powers",
+                "Wave optics: wavefront and Huygens' principle, laws of reflection and refraction using Huygens' principle",
+                "Interference, Young's double-slit experiment and expression for fringe width, coherent sources and sustained interference of light",
+                "Diffraction due to a single slit, width of central maximum",
+                "Polarisation, plane-polarised light, Brewster's law, uses of plane-polarised light and polaroid"
+              ]
+            },
+            {
+              "id": "phy_17",
+              "unitNumber": 17,
+              "name": "Dual Nature of Matter and Radiation",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2-3 Q/shift",
+              "topics": [
+                "Dual nature of radiation",
+                "Photoelectric effect, Hertz and Lenard's observations",
+                "Einstein's photoelectric equation, particle nature of light",
+                "Matter waves: wave nature of particle, de Broglie relation"
+              ]
+            },
+            {
+              "id": "phy_18",
+              "unitNumber": 18,
+              "name": "Atoms and Nuclei",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2-3 Q/shift",
+              "topics": [
+                "Alpha-particle scattering experiment, Rutherford's model of atom",
+                "Bohr model, energy levels, hydrogen spectrum",
+                "Composition and size of nucleus, atomic masses",
+                "Mass-energy relation, mass defect, binding energy per nucleon and its variation with mass number",
+                "Nuclear fission and fusion"
+              ]
+            },
+            {
+              "id": "phy_19",
+              "unitNumber": 19,
+              "name": "Electronic Devices",
+              "isImportant": true,
+              "importanceTier": "ONE_SHOT",
+              "weightageTag": "One Shot • Easy",
+              "topics": [
+                "Semiconductors, semiconductor diode: I-V characteristics in forward and reverse bias",
+                "Diode as a rectifier",
+                "I-V characteristics of LED, the photodiode, solar cell and Zener diode, Zener diode as a voltage regulator",
+                "Logic gates (OR, AND, NOT, NAND and NOR)"
+              ]
+            },
+            {
+              "id": "phy_20",
+              "unitNumber": 20,
+              "name": "Experimental Skills",
+              "isImportant": false,
+              "topics": [
+                "Vernier calipers (internal/external diameter and depth), Screw gauge (thickness/diameter)",
+                "Simple pendulum (energy dissipation plot), Metre scale (mass by principle of moments)",
+                "Young's modulus of elasticity of wire, Surface tension by capillary rise",
+                "Coefficient of viscosity by terminal velocity, Speed of sound using resonance tube",
+                "Specific heat capacity of solid and liquid by method of mixtures",
+                "Resistivity of wire using metre bridge, Resistance using Ohm's law",
+                "Focal length of convex mirror, concave mirror and convex lens using parallax method",
+                "Plot of angle of deviation vs angle of incidence for triangular prism, Refractive index of glass slab using travelling microscope",
+                "Characteristic curves of p-n junction diode and Zener diode, Identification of diode, LED, resistor, capacitor from mixed collection"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "branches": [
+        {
+          "id": "physical",
+          "name": "Physical",
+          "chapters": [
+            {
+              "id": "chem_01",
+              "unitNumber": 1,
+              "name": "Some Basic Concepts in Chemistry",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2 Q/shift",
+              "topics": [
+                "Matter and its nature, Dalton's atomic theory, concept of atom, molecule, element and compound",
+                "Laws of chemical combination",
+                "Atomic and molecular masses, mole concept, molar mass, percentage composition, empirical and molecular formulae",
+                "Chemical equations and stoichiometry"
+              ]
+            },
+            {
+              "id": "chem_02",
+              "unitNumber": 2,
+              "name": "Atomic Structure",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1 Q/shift",
+              "topics": [
+                "Nature of electromagnetic radiation, photoelectric effect, spectrum of the hydrogen atom",
+                "Bohr model of a hydrogen atom: postulates, derivation of energy and radii of orbits, limitations",
+                "Dual nature of matter, de Broglie's relationship, Heisenberg uncertainty principle",
+                "Quantum mechanical model of atom, quantum numbers, shapes of s, p and d orbitals",
+                "Aufbau principle, Pauli's exclusion principle, Hund's rule, electronic configuration of elements"
+              ]
+            },
+            {
+              "id": "chem_03",
+              "unitNumber": 3,
+              "name": "Chemical Bonding and Molecular Structure",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "Kossel-Lewis approach, ionic and covalent bonds",
+                "Ionic bonding: factors affecting formation, lattice enthalpy",
+                "Covalent bonding: electronegativity, Fajan's rule, dipole moment, VSEPR theory and shapes of molecules",
+                "Quantum mechanical approach: Valence bond theory, hybridization involving s, p and d orbitals, resonance",
+                "Molecular Orbital Theory: LCAO, sigma and pi bonds, MO energy level diagrams for homonuclear diatomic molecules, bond order, bond length, bond energy",
+                "Elementary idea of metallic bonding, hydrogen bonding and its applications"
+              ]
+            },
+            {
+              "id": "chem_04",
+              "unitNumber": 4,
+              "name": "Chemical Thermodynamics",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "Fundamentals of thermodynamics: system and surroundings, extensive and intensive properties, state functions, types of processes",
+                "First law of thermodynamics: internal energy and enthalpy, heat capacity, measurement of ΔU and ΔH",
+                "Hess's law of constant heat summation, enthalpies of bond dissociation, combustion, formation, atomization, sublimation, phase transition, hydration, ionization and solution",
+                "Second law of thermodynamics: spontaneity of processes, ΔS of the universe, ΔG of the system as criteria for spontaneity, ΔG° and equilibrium constant"
+              ]
+            },
+            {
+              "id": "chem_05",
+              "unitNumber": 5,
+              "name": "Solutions",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2 Q/shift",
+              "topics": [
+                "Different methods for expressing concentration of solution: molality, molarity, mole fraction, percentage (by volume and mass)",
+                "Vapour pressure of solutions and Raoult's law: ideal and non-ideal solutions, vapour pressure-composition plots",
+                "Colligative properties: relative lowering of vapour pressure, depression of freezing point, elevation of boiling point, osmotic pressure",
+                "Determination of molecular mass using colligative properties, abnormal molecular mass, van't Hoff factor and its significance"
+              ]
+            },
+            {
+              "id": "chem_06",
+              "unitNumber": 6,
+              "name": "Equilibrium",
+              "isImportant": false,
+              "topics": [
+                "Meaning of equilibrium, concept of dynamic equilibrium",
+                "Equilibria involving physical processes: solid-liquid, liquid-gas, solid-gas, Henry's law, general characteristics",
+                "Equilibria involving chemical processes: law of chemical equilibrium, equilibrium constants (Kp and Kc) and their significance, ΔG and ΔG° relation",
+                "Factors affecting equilibrium: concentration, pressure, temperature, effect of catalyst, Le Chatelier's principle",
+                "Ionic equilibrium: weak and strong electrolytes, ionization of electrolytes, various concepts of acids and bases (Arrhenius, Bronsted-Lowry, Lewis), ionization constants, pH scale",
+                "Common ion effect, hydrolysis of salts and pH of their solutions, solubility of sparingly soluble salts and solubility product, buffer solutions"
+              ]
+            },
+            {
+              "id": "chem_07",
+              "unitNumber": 7,
+              "name": "Redox Reactions and Electrochemistry",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "Electronic concepts of oxidation and reduction, redox reactions, oxidation number, rules for assigning oxidation number, balancing of redox reactions",
+                "Electrolytic and metallic conduction, conductance in electrolytic solutions, molar conductivities and variation with concentration, Kohlrausch's law and its applications",
+                "Electrochemical cells: electrolytic and galvanic cells, different types of electrodes, electrode potentials including standard electrode potential, half-cell and cell reactions",
+                "EMF of a galvanic cell and its measurement, Nernst equation and its applications, relationship between cell potential and Gibbs' energy change",
+                "Dry cell and lead accumulator, fuel cells"
+              ]
+            },
+            {
+              "id": "chem_08",
+              "unitNumber": 8,
+              "name": "Chemical Kinetics",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "Rate of a chemical reaction, factors affecting the rate of reactions: concentration, temperature, pressure and catalyst",
+                "Elementary and complex reactions, order and molecularity of reactions, rate law, rate constant and its units",
+                "Differential and integral forms of zero and first-order reactions, their characteristics and half-lives",
+                "Effect of temperature on rate of reactions, Arrhenius theory, activation energy and its calculation",
+                "Collision theory of bimolecular gaseous reactions (no derivation)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "inorganic",
+          "name": "Inorganic",
+          "chapters": [
+            {
+              "id": "chem_09",
+              "unitNumber": 9,
+              "name": "Classification of Elements and Periodicity in Properties",
+              "isImportant": true,
+              "importanceTier": "ONE_SHOT",
+              "weightageTag": "One Shot",
+              "topics": [
+                "Modern periodic law and present form of the periodic table",
+                "s, p, d and f block elements",
+                "Periodic trends in properties of elements: atomic and ionic radii, ionization enthalpy, electron gain enthalpy, valence, oxidation states and chemical reactivity"
+              ]
+            },
+            {
+              "id": "chem_10",
+              "unitNumber": 10,
+              "name": "p-Block Elements",
+              "isImportant": false,
+              "topics": [
+                "Group 13 to Group 18 Elements: general introduction, electronic configuration and general trends in physical and chemical properties across the periods and down the groups",
+                "Unique behaviour of the first element in each group"
+              ]
+            },
+            {
+              "id": "chem_11",
+              "unitNumber": 11,
+              "name": "d- and f-Block Elements",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "Transition Elements: general introduction, electronic configuration, occurrence and characteristics",
+                "General trends in properties of the first-row transition elements: physical properties, ionization enthalpy, oxidation states, atomic radii, colour, catalytic behaviour, magnetic properties, complex formation, interstitial compounds, alloy formation",
+                "Preparation, properties and uses of K2Cr2O7 and KMnO4",
+                "Inner Transition Elements: Lanthanoids (electronic configuration, oxidation states, lanthanoid contraction), Actinoids (electronic configuration and oxidation states)"
+              ]
+            },
+            {
+              "id": "chem_12",
+              "unitNumber": 12,
+              "name": "Coordination Compounds",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2-3 Q/shift",
+              "topics": [
+                "Introduction to coordination compounds, Werner's theory",
+                "Ligands, coordination number, denticity, chelation",
+                "IUPAC nomenclature of mononuclear coordination compounds, isomerism",
+                "Bonding: Valence bond approach and basic ideas of Crystal field theory, colour and magnetic properties",
+                "Importance of coordination compounds (in qualitative analysis, extraction of metals and in biological systems)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "organic",
+          "name": "Organic",
+          "chapters": [
+            {
+              "id": "chem_13",
+              "unitNumber": 13,
+              "name": "Purification and Characterisation of Organic Compounds",
+              "isImportant": true,
+              "importanceTier": "ONE_SHOT",
+              "weightageTag": "One Shot",
+              "topics": [
+                "Purification: crystallization, sublimation, distillation, differential extraction and chromatography (principles and applications)",
+                "Qualitative analysis: detection of nitrogen, sulphur, phosphorus and halogens",
+                "Quantitative analysis (basic principles only): estimation of carbon, hydrogen, nitrogen, halogens, sulphur, phosphorus",
+                "Calculations of empirical formulae and molecular formulae, numerical problems in organic quantitative analysis"
+              ]
+            },
+            {
+              "id": "chem_14",
+              "unitNumber": 14,
+              "name": "Some Basic Principles of Organic Chemistry",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2-3 Q/shift",
+              "topics": [
+                "Tetravalency of carbon, shapes of simple molecules, hybridization (s and p)",
+                "Classification of organic compounds based on functional groups and those containing halogens, oxygen, nitrogen and sulphur, homologous series",
+                "Isomerism: structural and stereoisomerism",
+                "Nomenclature (Trivial and IUPAC)",
+                "Covalent bond fission: homolytic and heterolytic, free radicals, carbocations and carbanions, stability of carbocations and free radicals, electrophiles and nucleophiles",
+                "Electronic displacement in a covalent bond: inductive effect, electromeric effect, resonance and hyperconjugation",
+                "Common types of organic reactions: substitution, addition, elimination and rearrangement"
+              ]
+            },
+            {
+              "id": "chem_15",
+              "unitNumber": 15,
+              "name": "Hydrocarbons",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2 Q/shift",
+              "topics": [
+                "Classification, isomerism, IUPAC nomenclature, general methods of preparation, properties and reactions",
+                "Alkanes: conformations (Sawhorse and Newman projections of ethane), mechanism of halogenation of alkanes",
+                "Alkenes: geometrical isomerism, mechanism of electrophilic addition (addition of hydrogen, halogens, water, hydrogen halides - Markownikoff's and peroxide effect), ozonolysis and polymerization",
+                "Alkynes: acidic character, addition of hydrogen, halogens, water and hydrogen halides, polymerization",
+                "Aromatic hydrocarbons: nomenclature, benzene structure and aromaticity, mechanism of electrophilic substitution (halogenation, nitration, Friedel-Craft's alkylation and acylation), directive influence of functional group in mono-substituted benzene"
+              ]
+            },
+            {
+              "id": "chem_16",
+              "unitNumber": 16,
+              "name": "Organic Compounds Containing Halogens",
+              "isImportant": false,
+              "topics": [
+                "General methods of preparation, properties and reactions",
+                "Nature of C-X bond",
+                "Mechanisms of substitution reactions",
+                "Uses and environmental effects of chloroform, iodoform, freons and DDT"
+              ]
+            },
+            {
+              "id": "chem_17",
+              "unitNumber": 17,
+              "name": "Organic Compounds Containing Oxygen",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2 Q/shift",
+              "topics": [
+                "General methods of preparation, properties, reactions and uses",
+                "Alcohols: identification of primary, secondary and tertiary alcohols, mechanism of dehydration",
+                "Phenols: acidic nature, electrophilic substitution reactions (halogenation, nitration, sulphonation), Reimer-Tiemann reaction",
+                "Ethers: structure",
+                "Aldehydes and Ketones: nature of carbonyl group, nucleophilic addition to >C=O group, relative reactivities of aldehydes and ketones, important reactions (nucleophilic addition-elimination with ammonia derivatives, Grignard reagent, oxidation, reduction - Wolff Kishner and Clemmensen, acidity of α-hydrogen, aldol condensation, Cannizzaro reaction, Haloform reaction, chemical tests)",
+                "Carboxylic Acids: acidic strength and factors affecting it"
+              ]
+            },
+            {
+              "id": "chem_18",
+              "unitNumber": 18,
+              "name": "Organic Compounds Containing Nitrogen",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "General methods of preparation, properties, reactions and uses",
+                "Amines: nomenclature, classification, structure, basic character and identification of primary, secondary and tertiary amines and their basic character",
+                "Diazonium salts: importance in synthetic organic chemistry"
+              ]
+            },
+            {
+              "id": "chem_19",
+              "unitNumber": 19,
+              "name": "Biomolecules",
+              "isImportant": true,
+              "importanceTier": "ONE_SHOT",
+              "weightageTag": "One Shot",
+              "topics": [
+                "General introduction and importance of biomolecules",
+                "Carbohydrates: classification, aldoses and ketoses, monosaccharides (glucose and fructose) and constituent monosaccharides of oligosaccharides (sucrose, lactose and maltose)",
+                "Proteins: elementary idea of α-amino acids, peptide bond, polypeptides, primary, secondary, tertiary and quaternary structure (qualitative idea only), denaturation of proteins, enzymes",
+                "Vitamins: classification and functions",
+                "Nucleic acids: chemical constitution of DNA and RNA, biological functions of nucleic acids",
+                "Hormones (General introduction)"
+              ]
+            },
+            {
+              "id": "chem_20",
+              "unitNumber": 20,
+              "name": "Principles Related to Practical Chemistry",
+              "isImportant": true,
+              "importanceTier": "ONE_SHOT",
+              "weightageTag": "One Shot",
+              "topics": [
+                "Detection of extra elements (Nitrogen, Sulphur, Halogens) in organic compounds",
+                "Detection of functional groups: hydroxyl (alcoholic and phenolic), carbonyl (aldehyde and ketones), carboxyl and amino groups in organic compounds",
+                "Chemistry involved in the preparation of: inorganic compounds (Mohr's salt, potash alum) and organic compounds (acetanilide, p-nitroacetanilide, aniline yellow, iodoform)",
+                "Chemistry involved in titrimetric exercises: acids, bases and use of indicators, oxalic acid vs KMnO4, Mohr's salt vs KMnO4",
+                "Chemical principles involved in qualitative salt analysis: Cations (Pb2+, Cu2+, Al3+, Fe3+, Zn2+, Ni2+, Ca2+, Ba2+, Mg2+, NH4+) and Anions (CO3^2-, S^2-, SO4^2-, NO3-, NO2-, Cl-, Br-, I-)",
+                "Chemical principles involved in experiments: enthalpy of solution of CuSO4, enthalpy of neutralization of strong acid and strong base, preparation of lyophilic and lyophobic sols, kinetic study of reaction of iodide ions with H2O2 at room temperature"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maths",
+      "name": "Maths",
+      "branches": [
+        {
+          "id": "maths_all",
+          "name": "All Units",
+          "chapters": [
+            {
+              "id": "math_01",
+              "unitNumber": 1,
+              "name": "Sets, Relations and Functions",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2 Q/shift",
+              "topics": [
+                "Sets and their representation: union, intersection and complement of sets and their algebraic properties, power set",
+                "Relations, type of relations, equivalence relations",
+                "Functions: one-one, into and onto functions, composition of functions"
+              ]
+            },
+            {
+              "id": "math_02",
+              "unitNumber": 2,
+              "name": "Complex Numbers and Quadratic Equations",
+              "isImportant": true,
+              "importanceTier": "KEY_CHAPTER",
+              "weightageTag": "Must Do",
+              "topics": [
+                "Complex numbers as ordered pairs of reals, representation in the form a + ib and in a plane, Argand diagram",
+                "Algebra of complex numbers, modulus and argument (amplitude) of a complex number",
+                "Quadratic equations in real and complex number systems and their solutions",
+                "Relations between roots and coefficients, nature of roots, formation of quadratic equations with given roots"
+              ]
+            },
+            {
+              "id": "math_03",
+              "unitNumber": 3,
+              "name": "Matrices and Determinants",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2 Q/shift",
+              "topics": [
+                "Matrices, algebra of matrices, type of matrices",
+                "Determinants and matrices of order two and three, evaluation of determinants, area of triangles using determinants",
+                "Adjoint and evaluation of inverse of a square matrix using determinants",
+                "Test of consistency and solution of simultaneous linear equations in two or three variables using matrices"
+              ]
+            },
+            {
+              "id": "math_04",
+              "unitNumber": 4,
+              "name": "Permutations and Combinations",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2-3 Q/shift",
+              "topics": [
+                "Fundamental principle of counting",
+                "Permutation as an arrangement and combination as selection",
+                "Meaning of P(n, r) and C(n, r), simple applications"
+              ]
+            },
+            {
+              "id": "math_05",
+              "unitNumber": 5,
+              "name": "Binomial Theorem and Its Simple Applications",
+              "isImportant": false,
+              "topics": [
+                "Binomial theorem for a positive integral index",
+                "General term and middle term",
+                "Simple applications"
+              ]
+            },
+            {
+              "id": "math_06",
+              "unitNumber": 6,
+              "name": "Sequence and Series",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "Arithmetic and Geometric progressions",
+                "Insertion of arithmetic, geometric means between two given numbers",
+                "Relation between A.M. and G.M."
+              ]
+            },
+            {
+              "id": "math_07",
+              "unitNumber": 7,
+              "name": "Limit, Continuity and Differentiability",
+              "isImportant": true,
+              "importanceTier": "KEY_CHAPTER",
+              "weightageTag": "Must Do",
+              "topics": [
+                "Real-valued functions, algebra of functions, polynomial, rational, trigonometric, logarithmic and exponential functions, inverse functions, graphs of simple functions",
+                "Limits, continuity and differentiability",
+                "Differentiation of sum, difference, product and quotient of two functions, differentiation of trigonometric, inverse trigonometric, logarithmic, exponential, composite and implicit functions, derivatives of order up to two",
+                "Applications of derivatives: rate of change of quantities, monotonic (increasing and decreasing) functions, maxima and minima of functions of one variable"
+              ]
+            },
+            {
+              "id": "math_08",
+              "unitNumber": 8,
+              "name": "Integral Calculus",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1 Q/shift",
+              "topics": [
+                "Integral as an anti-derivative",
+                "Fundamental integrals involving algebraic, trigonometric, exponential and logarithmic functions",
+                "Integration by substitution, by parts and by partial fractions, integration using trigonometric identities",
+                "Evaluation of simple standard integrals",
+                "The fundamental theorem of calculus, properties of definite integrals, evaluation of definite integrals",
+                "Determining areas of the regions bounded by simple curves in standard form"
+              ]
+            },
+            {
+              "id": "math_09",
+              "unitNumber": 9,
+              "name": "Differential Equations",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "1-2 Q/shift",
+              "topics": [
+                "Ordinary differential equations, their order and degree",
+                "Solution of differential equation by the method of separation of variables",
+                "Solution of a homogeneous and linear differential equation of the type dy/dx + p(x)y = q(x)"
+              ]
+            },
+            {
+              "id": "math_10",
+              "unitNumber": 10,
+              "name": "Co-ordinate Geometry",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "3-4 Q/shift",
+              "topics": [
+                "Cartesian system of rectangular coordinates in a plane, distance formula, sections formula, locus and its equation, slope of a line, parallel and perpendicular lines, intercepts of a line on the coordinate axes",
+                "Straight line: various forms of equations of a line, intersection of lines, angles between two lines, conditions for concurrence of three lines, distance of a point from a line, coordinate of centroid, orthocentre and circumcentre of a triangle",
+                "Circle, conic sections: standard form of equations of a circle, general form of equation of a circle (radius and centre), equation of a circle when endpoints of a diameter are given, points of intersection of a line and a circle with centre at origin and sections of a cone",
+                "Equations of conic sections (parabola, ellipse and hyperbola) in standard forms"
+              ]
+            },
+            {
+              "id": "math_11",
+              "unitNumber": 11,
+              "name": "Three-Dimensional Geometry",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "3 Q/shift",
+              "topics": [
+                "Coordinates of a point in space, distance between two points",
+                "Section formula, direction ratios and direction cosines, angle between two intersecting lines",
+                "Skew lines, the shortest distance between them and its equation",
+                "Equations of a line"
+              ]
+            },
+            {
+              "id": "math_12",
+              "unitNumber": 12,
+              "name": "Vector Algebra",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "3 Q/shift",
+              "topics": [
+                "Vectors and scalars, addition of vectors, components of a vector in two dimensions and three-dimensional space",
+                "Scalar and vector products"
+              ]
+            },
+            {
+              "id": "math_13",
+              "unitNumber": 13,
+              "name": "Statistics and Probability",
+              "isImportant": true,
+              "importanceTier": "HIGH_WEIGHTAGE",
+              "weightageTag": "2-3 Q/shift",
+              "topics": [
+                "Measures of dispersion: calculation of mean, median, mode of grouped and ungrouped data, calculation of standard deviation, variance and mean deviation for grouped and ungrouped data",
+                "Probability: probability of an event, addition and multiplication theorems of probability, Bayes theorem, probability distribution of a random variate"
+              ]
+            },
+            {
+              "id": "math_14",
+              "unitNumber": 14,
+              "name": "Trigonometry",
+              "isImportant": false,
+              "topics": [
+                "Trigonometrical identities and trigonometrical functions",
+                "Inverse trigonometrical functions and their properties"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

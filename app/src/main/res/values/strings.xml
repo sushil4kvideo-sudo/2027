@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">JEE Tracker</string>
+    <string name="nav_syllabus">Syllabus</string>
+    <string name="nav_revision">Revision</string>
+    <string name="nav_time_counter">Time Counter</string>
+    <string name="cd_settings">Open settings</string>
+    <string name="cd_back">Navigate back</string>
+    <string name="cd_subject_progress">Subject progress indicator</string>
+    <string name="stage_theory">Theory</string>
+    <string name="stage_practice">Practice</string>
+    <string name="stage_revision">Revision</string>
+</resources>

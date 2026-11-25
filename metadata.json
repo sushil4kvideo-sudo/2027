@@ -1,0 +1,6 @@
+{
+  "name": "JEE Tracker",
+  "description": "Offline JEE Main 2027 syllabus, revision, and pace tracker built with Material 3 and Jetpack Compose.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
