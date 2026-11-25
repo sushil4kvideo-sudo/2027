@@ -415,9 +415,12 @@ private fun ChapterCollectionContent(
                             animatedVisibilityScope = null,
                             onClick = { onChapterClick(chapter) },
                             modifier = Modifier.animateItem(
-                                fadeInSpec = tween(220),
-                                fadeOutSpec = tween(180),
-                                placementSpec = spring(stiffness = Spring.StiffnessMediumLow)
+                                fadeInSpec = null,
+                                fadeOutSpec = null,
+                                placementSpec = spring(
+                                    dampingRatio = 0.86f,
+                                    stiffness = Spring.StiffnessMedium
+                                )
                             )
                         )
                     }
