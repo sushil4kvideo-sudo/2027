@@ -17,6 +17,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.scaleIn
 import androidx.compose.animation.scaleOut
 import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -29,6 +30,7 @@ import androidx.compose.material.icons.outlined.Timer
 import androidx.compose.material.icons.rounded.AutoAwesome
 import androidx.compose.material.icons.rounded.MenuBook
 import androidx.compose.material.icons.rounded.Timer
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -40,8 +42,12 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -69,6 +75,8 @@ import com.example.ui.screens.SubjectDetailScreen
 import com.example.ui.screens.SyllabusScreen
 import com.example.ui.screens.TimeCounterScreen
 import com.example.ui.theme.JeeTrackerTheme
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 object AppRoutes {
     const val SYLLABUS = "syllabus"
@@ -113,18 +121,35 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        val database = AppDatabase.getInstance(applicationContext)
-        val repository = JeeTrackerRepository(
-            syllabusAssetLoader = SyllabusAssetLoader(applicationContext),
-            progressDao = database.chapterProgressDao(),
-            settingsDataStore = SettingsDataStore(applicationContext)
-        )
-
+        val appContext = applicationContext
         setContent {
-            val viewModel: JeeTrackerViewModel = viewModel(
-                factory = JeeTrackerViewModel.Factory(repository)
-            )
-            JeeTrackerApp(viewModel = viewModel)
+            var repository by remember { mutableStateOf<JeeTrackerRepository?>(null) }
+
+            LaunchedEffect(appContext) {
+                repository = withContext(Dispatchers.IO) {
+                    val database = AppDatabase.getInstance(appContext)
+                    JeeTrackerRepository(
+                        syllabusAssetLoader = SyllabusAssetLoader(appContext),
+                        progressDao = database.chapterProgressDao(),
+                        settingsDataStore = SettingsDataStore(appContext)
+                    )
+                }
+            }
+
+            val loadedRepository = repository
+            if (loadedRepository == null) {
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator()
+                }
+            } else {
+                val viewModel: JeeTrackerViewModel = viewModel(
+                    factory = JeeTrackerViewModel.Factory(loadedRepository)
+                )
+                JeeTrackerApp(viewModel = viewModel)
+            }
         }
     }
 }
@@ -136,7 +161,6 @@ fun JeeTrackerApp(viewModel: JeeTrackerViewModel) {
     val chapters by viewModel.chapters.collectAsStateWithLifecycle()
     val subjectSummaries by viewModel.subjectSummaries.collectAsStateWithLifecycle()
     val overallSummary by viewModel.overallSummary.collectAsStateWithLifecycle()
-    val timeCounterState by viewModel.timeCounterState.collectAsStateWithLifecycle()
 
     JeeTrackerTheme(settings = settings) {
         val navController = rememberNavController()
@@ -347,6 +371,7 @@ fun JeeTrackerApp(viewModel: JeeTrackerViewModel) {
                     }
 
                     composable(AppRoutes.TIME_COUNTER) {
+                        val timeCounterState by viewModel.timeCounterState.collectAsStateWithLifecycle()
                         TimeCounterScreen(uiState = timeCounterState)
                     }
 
