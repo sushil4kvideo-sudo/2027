@@ -149,12 +149,17 @@ fun SettingsScreen(
                             onCheckedChange = onDynamicColorChange
                         )
 
-                        AnimatedVisibility(visible = !settings.dynamicColor) {
+                        AnimatedVisibility(visible = true) {
                             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                                 Text(
-                                    text = "Accent Color Presets",
+                                    text = "Subject Card Colors",
                                     style = MaterialTheme.typography.titleSmall,
                                     color = MaterialTheme.colorScheme.onSurface
+                                )
+                                Text(
+                                    text = "Pick the colors used by Physics, Chemistry and Maths cards.",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                                 val rows = AccentPreset.entries.chunked(4)
                                 rows.forEach { rowPresets ->
