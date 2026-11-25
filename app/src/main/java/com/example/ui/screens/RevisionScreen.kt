@@ -215,9 +215,12 @@ fun RevisionScreen(
                             onToggleRevision = { onMarkRevisionDone(chapter, !chapter.revisionDone) },
                             onOpenDetails = { sheetChapterId = chapter.spec.id },
                             modifier = Modifier.animateItem(
-                                fadeInSpec = tween(220),
-                                fadeOutSpec = tween(180),
-                                placementSpec = spring(stiffness = Spring.StiffnessMediumLow)
+                                fadeInSpec = null,
+                                fadeOutSpec = null,
+                                placementSpec = spring(
+                                    dampingRatio = 0.86f,
+                                    stiffness = Spring.StiffnessMedium
+                                )
                             )
                         )
                     }
@@ -240,9 +243,12 @@ fun RevisionScreen(
                             onToggleRevision = { onMarkRevisionDone(chapter, !chapter.revisionDone) },
                             onOpenDetails = { sheetChapterId = chapter.spec.id },
                             modifier = Modifier.animateItem(
-                                fadeInSpec = tween(220),
-                                fadeOutSpec = tween(180),
-                                placementSpec = spring(stiffness = Spring.StiffnessMediumLow)
+                                fadeInSpec = null,
+                                fadeOutSpec = null,
+                                placementSpec = spring(
+                                    dampingRatio = 0.86f,
+                                    stiffness = Spring.StiffnessMedium
+                                )
                             )
                         )
                     }
@@ -265,9 +271,12 @@ fun RevisionScreen(
                             onToggleRevision = { onMarkRevisionDone(chapter, !chapter.revisionDone) },
                             onOpenDetails = { sheetChapterId = chapter.spec.id },
                             modifier = Modifier.animateItem(
-                                fadeInSpec = tween(220),
-                                fadeOutSpec = tween(180),
-                                placementSpec = spring(stiffness = Spring.StiffnessMediumLow)
+                                fadeInSpec = null,
+                                fadeOutSpec = null,
+                                placementSpec = spring(
+                                    dampingRatio = 0.86f,
+                                    stiffness = Spring.StiffnessMedium
+                                )
                             )
                         )
                     }
