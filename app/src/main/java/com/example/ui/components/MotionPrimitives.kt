@@ -28,7 +28,6 @@ import androidx.compose.ui.composed
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.TextStyle
-import kotlinx.coroutines.delay
 
 object MotionTokens {
     val EmphasizedDecelerate = CubicBezierEasing(0.05f, 0.7f, 0.1f, 1.0f)
@@ -63,8 +62,12 @@ fun Modifier.pressScale(
 }
 
 /**
- * Clean Material 3 staggered vertical reveal without harsh jumps or flashy effects.
+ * Lightweight one-shot entrance for larger screen sections.
+ *
+ * No per-item delay or vertical relayout: list items can appear immediately while
+ * keeping a short fade that does not compete with scrolling.
  */
+@Suppress("UNUSED_PARAMETER")
 @Composable
 fun StaggeredEntrance(
     index: Int,
@@ -73,8 +76,6 @@ fun StaggeredEntrance(
 ) {
     var visible by remember { mutableStateOf(false) }
     LaunchedEffect(Unit) {
-        val delayMs = (index.coerceIn(0, 8) * 32L)
-        if (delayMs > 0) delay(delayMs)
         visible = true
     }
 
@@ -82,10 +83,7 @@ fun StaggeredEntrance(
         visible = visible,
         modifier = modifier,
         enter = fadeIn(
-            animationSpec = tween(durationMillis = 260, easing = MotionTokens.EmphasizedDecelerate)
-        ) + slideInVertically(
-            animationSpec = tween(durationMillis = 320, easing = MotionTokens.EmphasizedDecelerate),
-            initialOffsetY = { it / 5 }
+            animationSpec = tween(durationMillis = 140, easing = MotionTokens.EmphasizedDecelerate)
         )
     ) {
         content()
