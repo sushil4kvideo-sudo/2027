@@ -286,6 +286,7 @@ fun JeeTrackerApp(viewModel: JeeTrackerViewModel) {
                             overallSummary = overallSummary,
                             subjectSummaries = subjectSummaries,
                             syllabusYear = viewModel.syllabusData.syllabusYear,
+                            accentPreset = settings.accentPreset,
                             sharedTransitionScope = this@SharedTransitionLayout,
                             animatedVisibilityScope = this,
                             onSubjectClick = { subjectId ->
