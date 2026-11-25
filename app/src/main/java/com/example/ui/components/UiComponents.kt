@@ -244,21 +244,12 @@ fun StagePillIndicator(
     activeColor: Color,
     compact: Boolean = false
 ) {
-    val bgColor by animateColorAsState(
-        targetValue = if (done) activeColor.copy(alpha = 0.16f) else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f),
-        animationSpec = tween(220),
-        label = "stage_pill_bg"
-    )
-    val contentColor by animateColorAsState(
-        targetValue = if (done) activeColor else MaterialTheme.colorScheme.onSurfaceVariant,
-        animationSpec = tween(220),
-        label = "stage_pill_fg"
-    )
-    val checkScale by animateFloatAsState(
-        targetValue = if (done) 1f else 0.82f,
-        animationSpec = spring(dampingRatio = 0.55f, stiffness = Spring.StiffnessMedium),
-        label = "stage_check_scale"
-    )
+    val bgColor = if (done) {
+        activeColor.copy(alpha = 0.16f)
+    } else {
+        MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f)
+    }
+    val contentColor = if (done) activeColor else MaterialTheme.colorScheme.onSurfaceVariant
 
     Surface(
         color = bgColor,
@@ -276,19 +267,11 @@ fun StagePillIndicator(
             Box(
                 modifier = Modifier
                     .size(if (compact) 14.dp else 16.dp)
-                    .graphicsLayer {
-                        scaleX = checkScale
-                        scaleY = checkScale
-                    }
                     .clip(CircleShape)
                     .background(if (done) activeColor else MaterialTheme.colorScheme.outline.copy(alpha = 0.25f)),
                 contentAlignment = Alignment.Center
             ) {
-                androidx.compose.animation.AnimatedVisibility(
-                    visible = done,
-                    enter = scaleIn(spring(dampingRatio = 0.5f)) + fadeIn(),
-                    exit = scaleOut() + fadeOut()
-                ) {
+                if (done) {
                     Icon(
                         imageVector = Icons.Rounded.Check,
                         contentDescription = "$label done",
