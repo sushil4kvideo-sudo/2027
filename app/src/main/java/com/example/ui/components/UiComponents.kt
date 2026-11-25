@@ -24,6 +24,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -457,12 +458,6 @@ fun ChapterHorizontalCard(
                     done = chapter.revisionDone,
                     activeColor = StageRevisionColor,
                     compact = true
-                )
-            }
-        }
-    }
-}
-
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
 fun ChapterVerticalRow(
@@ -514,7 +509,7 @@ fun ChapterVerticalRow(
             .then(sharedMod)
             .pressScale(interactionSource)
             .fillMaxWidth()
-            .height(if (isCompact) 168.dp else 184.dp)
+            .heightIn(min = if (isCompact) 126.dp else 140.dp)
             .testTag("chapter_card_${chapter.spec.id}"),
         shape = RoundedCornerShape(appearance.cardCornerRadius),
         colors = CardDefaults.cardColors(containerColor = containerColor),
@@ -522,15 +517,16 @@ fun ChapterVerticalRow(
     ) {
         Column(
             modifier = Modifier
-                .fillMaxSize()
-                .padding(appearance.cardPadding),
-            verticalArrangement = Arrangement.SpaceBetween
+                .fillMaxWidth()
+                .padding(
+                    horizontal = appearance.cardPadding,
+                    vertical = if (isCompact) 10.dp else 12.dp
+                ),
+            verticalArrangement = Arrangement.spacedBy(if (isCompact) 8.dp else 10.dp)
         ) {
             Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(100.dp),
-                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.Top,
                 horizontalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 Surface(
@@ -550,22 +546,18 @@ fun ChapterVerticalRow(
 
                 Column(
                     modifier = Modifier.weight(1f),
-                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                    verticalArrangement = Arrangement.spacedBy(5.dp)
                 ) {
                     Text(
                         text = chapter.spec.name,
                         style = MaterialTheme.typography.titleMedium,
                         color = MaterialTheme.colorScheme.onSurface,
                         maxLines = 2,
-                        overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(70.dp)
+                        overflow = TextOverflow.Ellipsis
                     )
+
                     Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(26.dp),
+                        modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
@@ -599,7 +591,9 @@ fun ChapterVerticalRow(
             }
 
             Row(
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 StagePillIndicator(
                     label = "Theory",
